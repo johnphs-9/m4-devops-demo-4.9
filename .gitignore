@@ -164,8 +164,8 @@ build/
 !.vscode/tasks.json
 
 ### Github ###
-.github/
-.github/*
+# .github/
+# .github/*
 
 ### Editor directories and files
 .DS_Store
