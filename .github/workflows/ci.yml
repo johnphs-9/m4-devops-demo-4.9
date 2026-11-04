@@ -91,11 +91,11 @@ jobs:
         working-directory: devops-demo-4.9.0
         run: |
           echo "Building Docker image..."
-          docker build -t $DOCKER_USERNAME/devops-demo:latest .
+          docker build -t "$DOCKER_USERNAME/m4-devops-demo-4.9:latest" .
 
       - name: Push to Docker Hub
         run: |
           echo "Logging in to Docker Hub..."
           echo $DOCKER_TOKEN | docker login -u $DOCKER_USERNAME --password-stdin
           echo "Pushing image to Docker Hub..."
-          docker push $DOCKER_USERNAME/devops-demo:latest
+          docker push "$DOCKER_USERNAME/m4-devops-demo-4.9:latest"
